@@ -1,3 +1,9 @@
+/*
+ * Author: Michael Tenkorang
+ * Black Jack Game
+ * Date: 02/11/2023
+ */
+
 import java.util.ArrayList;
 
 public class Hand {
@@ -68,6 +74,6 @@ public class Hand {
      * @return a string representation of the hand
      */
     public String toString() {
-        return cards.toString() + " Total: " + count;
+        return cards.toString() + " Total: " + getTotalValue();
     }
 }

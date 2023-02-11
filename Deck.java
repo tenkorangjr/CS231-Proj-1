@@ -1,3 +1,9 @@
+/*
+ * Author: Michael Tenkorang
+ * Black Jack Game
+ * Date: 02/11/2023
+ */
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -23,7 +29,7 @@ public class Deck {
     public void build() {
         deck.clear();
 
-        for (int i = 0; i <= 11; i++) {
+        for (int i = 2; i <= 11; i++) {
             for (int j = 0; j < 4; j++) {
                 deck.add(new Card(i));
             }

@@ -1,3 +1,9 @@
+/*
+ * Author: Michael Tenkorang
+ * Black Jack Game
+ * Date: 02/11/2023
+ */
+
 public class Card {
 
     /**
@@ -7,8 +13,6 @@ public class Card {
 
     /**
      * Constructs a card with the specified value.
-     * 
-     * @param val
      */
 
     public Card(int val) {
@@ -17,8 +21,6 @@ public class Card {
 
     /**
      * Returns the value of the card.
-     * 
-     * @return the value of the card
      */
     public int getValue() {
         return value;
@@ -26,8 +28,6 @@ public class Card {
 
     /**
      * Returns a string representation of this card.
-     * 
-     * @return a string representation of this card
      */
     public String toString() {
         return "" + value;

@@ -1,3 +1,9 @@
+/*
+ * Author: Michael Tenkorang
+ * Black Jack Game
+ * Date: 02/11/2023
+ */
+
 public class Simulation {
 
     public static void main(String[] args) {
