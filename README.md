@@ -1,2 +1,2 @@
-# CS231-Proj-1
+# Project 1
 BlackJack game
