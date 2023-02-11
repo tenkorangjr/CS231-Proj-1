@@ -2,6 +2,9 @@
  * Author: Michael Tenkorang
  * Black Jack Game
  * Date: 02/11/2023
+ * CS 231
+ * Section B
+ * Deck.java
  */
 
 import java.util.ArrayList;
@@ -41,8 +44,6 @@ public class Deck {
 
     /**
      * Returns the number of cards left in the deck.
-     * 
-     * @return the number of cards left in the deck
      */
     public int size() {
         return deck.size();
@@ -51,7 +52,6 @@ public class Deck {
     /**
      * Returns and removes the first card of the deck.
      * 
-     * @return the first card of the deck
      */
     public Card deal() {
         Card currCard = deck.get(0);
@@ -76,8 +76,6 @@ public class Deck {
 
     /**
      * Returns a string representation of the deck.
-     * 
-     * @return a string representation of the deck
      */
     public String toString() {
         return deck.toString();

@@ -2,6 +2,9 @@
  * Author: Michael Tenkorang
  * Black Jack Game
  * Date: 02/11/2023
+ * CS 231
+ * Section B
+ * Hand.java
  */
 
 import java.util.ArrayList;

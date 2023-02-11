@@ -2,6 +2,9 @@
  * Author: Michael Tenkorang
  * Black Jack Game
  * Date: 02/11/2023
+ * CS 231
+ * Section B
+ * BlackJack.java
  */
 
 import java.util.Scanner;
@@ -20,9 +23,34 @@ public class BlackJack {
     // For input
     Scanner uScanner;
 
-    public int checkHigher(Hand player, Hand dealer) {
-        // returns 1 if player has higher total, 0 if player and dealer have
-        // equal cards and -1 if dealer has a higher total
+    public BlackJack(int reshuffleCutOff) {
+        /*
+         * Constructor with defined reshuffle cutoff
+         */
+        minShuffle = reshuffleCutOff;
+        deck = new Deck();
+        playerHand = new Hand();
+        dealerHand = new Hand();
+        uScanner = new Scanner(System.in);
+    }
+
+    public BlackJack() {
+        /*
+         * Constructor with default reshuffle cutoff
+         */
+        minShuffle = 26;
+        deck = new Deck();
+        playerHand = new Hand();
+        dealerHand = new Hand();
+        uScanner = new Scanner(System.in);
+    }
+
+    private int checkHigher(Hand player, Hand dealer) {
+        /*
+         * Check for the hand with the higher value of cards
+         * Returns 1 if player has higher, -1 if dealer has higher and 0 if both hands
+         * have equal cards
+         */
 
         if (playerHand.getTotalValue() > dealerHand.getTotalValue()) {
             return 1;
@@ -33,7 +61,10 @@ public class BlackJack {
         }
     }
 
-    public int playerTurnInteractive(String input) {
+    private int playerTurnInteractive(String input) {
+        /*
+         * Check input players against "Hit" or "Stand" to control game
+         */
 
         if (input.equalsIgnoreCase("Hit")) {
             return 1;
@@ -44,7 +75,9 @@ public class BlackJack {
     }
 
     public int game(boolean verbose) {
-        // Start a game of BlackJack
+        /*
+         * Start a new game
+         */
 
         reset();
         int res = 0;
@@ -84,7 +117,9 @@ public class BlackJack {
     }
 
     public int game(boolean verbose, boolean interactive) {
-        // Start a game of BlackJack
+        /*
+         * Start a new BlackJack game (mainly for the user interactivity)
+         */
 
         reset();
         int res = 0;
@@ -123,26 +158,10 @@ public class BlackJack {
         return res;
     }
 
-    public BlackJack(int reshuffleCutOff) {
-        // Constructor with the value to reshuffle cards
-        minShuffle = reshuffleCutOff;
-        deck = new Deck();
-        playerHand = new Hand();
-        dealerHand = new Hand();
-        uScanner = new Scanner(System.in);
-    }
-
-    public BlackJack() {
-        // Constructor with default value for reshuffle
-        minShuffle = 26;
-        deck = new Deck();
-        playerHand = new Hand();
-        dealerHand = new Hand();
-        uScanner = new Scanner(System.in);
-    }
-
-    public void reset() {
-        // Reset the deck and clear the hands of the dealer and player
+    private void reset() {
+        /*
+         * Reset the deck and clear the hands of the dealer and player
+         */
 
         if (deck.size() < minShuffle) {
             deck = new Deck();
@@ -153,12 +172,17 @@ public class BlackJack {
     }
 
     public void deal() {
+        /*
+         * Deal out cards to both the player and the dealer
+         */
         playerHand.add(deck.deal()); // deal a card from deck to player
         dealerHand.add(deck.deal()); // deal a card from deck to player
     }
 
     public boolean playerTurn(boolean interactivity) {
-        // Add cards to player till 16 is reached
+        /*
+         * Add cards to player's hand till 16 is reached
+         */
 
         if (!(interactivity)) {
             while (playerHand.getTotalValue() < 16) {
@@ -188,7 +212,9 @@ public class BlackJack {
     }
 
     public boolean dealerTurn() {
-        // Add cards to dealer till 17 is reached
+        /*
+         * Add cards to dealer's hands till 17 is reached
+         */
 
         while (dealerHand.getTotalValue() < 17) {
             dealerHand.add(deck.deal());
@@ -201,17 +227,23 @@ public class BlackJack {
     }
 
     public void setReshuffleCutOff(int newCutOff) {
-        // Change the cutoff for reshuffle
+        /*
+         * Changes the cutoff for reshuffle
+         */
         minShuffle = newCutOff;
     }
 
     public int getReshuffleCutOff() {
-        // Return the current minimum value for cutoff
+        /*
+         * Return the current minimum value for cutoff
+         */
         return minShuffle;
     }
 
     public String toString() {
-        // Displays current cards and values
+        /*
+         * Displays the current cards in both the player's and dealer's hand
+         */
         return "Player: " + playerHand + "\nDealer: " + dealerHand;
     }
 }
