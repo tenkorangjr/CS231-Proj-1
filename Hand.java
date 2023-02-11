@@ -68,6 +68,6 @@ public class Hand {
      * @return a string representation of the hand
      */
     public String toString() {
-        return cards.toString() + ": " + count;
+        return cards.toString() + " Total: " + count;
     }
 }

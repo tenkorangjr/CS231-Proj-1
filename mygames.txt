@@ -1,0 +1,21 @@
+Player: [] Total: 0
+Dealer: [] Total: 0
+Player: [10, 5, 9] Total: 24
+Dealer: [8, 5, 10] Total: 23
+This game was a tie!
+
+
+Player: [] Total: 0
+Dealer: [] Total: 0
+Player: [8, 1, 6, 10] Total: 25
+Dealer: [0, 8, 10] Total: 18
+Dealer won this game! 
+
+
+Player: [] Total: 0
+Dealer: [] Total: 0
+Player: [10, 10] Total: 20
+Dealer: [7, 6, 10] Total: 23
+Player won this game 
+
+
