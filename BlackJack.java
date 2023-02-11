@@ -9,12 +9,6 @@ public class BlackJack {
     // For reshuffling
     int minShuffle;
 
-    public static void main(String[] args) {
-        BlackJack blackJack = new BlackJack();
-
-        blackJack.game(true);
-    }
-
     public int checkHigher(Hand player, Hand dealer) {
         // returns 1 if player has higher total, 0 if player and dealer have
         // equal cards and -1 if dealer has a higher total
