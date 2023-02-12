@@ -93,9 +93,10 @@ public class BlackJack {
 
         boolean playerNotDone = playerTurn(false);
         if (!(playerNotDone)) {
+            System.out.println(toString());
             res = -1;
             if (verbose) {
-                result(res);
+                getResult(res);
             }
             return res;
         }
@@ -163,12 +164,12 @@ public class BlackJack {
 
         // Give information about the result if verbose is true
         if (verbose) {
-            result(res);
+            getResult(res);
         }
         return res;
     }
 
-    private static void result(int res) {
+    private static void getResult(int res) {
         if (res == 0) {
             System.out.println("This game was a tie!\n\n");
         } else if (res == -1) {
