@@ -129,6 +129,11 @@ public class BlackJack {
         }
 
         boolean playerNotDone = playerTurn(interactive);
+        if (!(playerNotDone)) {
+            res = -1;
+            result(res);
+            return res;
+        }
         boolean dealerNotDone = dealerTurn();
 
         if (verbose) {
@@ -147,15 +152,19 @@ public class BlackJack {
 
         // Give information about the result if verbose is true
         if (verbose) {
-            if (res == 0) {
-                System.out.println("This game was a tie!\n\n");
-            } else if (res == -1) {
-                System.out.println("Dealer won this game! \n\n");
-            } else if (res == 1) {
-                System.out.println("Player won this game \n\n");
-            }
+            result(res);
         }
         return res;
+    }
+
+    public static void result(int res) {
+        if (res == 0) {
+            System.out.println("This game was a tie!\n\n");
+        } else if (res == -1) {
+            System.out.println("Dealer won this game! \n\n");
+        } else if (res == 1) {
+            System.out.println("Player won this game \n\n");
+        }
     }
 
     private void reset() {
