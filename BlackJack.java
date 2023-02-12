@@ -45,6 +45,11 @@ public class BlackJack {
         uScanner = new Scanner(System.in);
     }
 
+    public static void main(String[] args) {
+        BlackJack blackJackGame = new BlackJack();
+        blackJackGame.game(true);
+    }
+
     private int checkHigher(Hand player, Hand dealer) {
         /*
          * Check for the hand with the higher value of cards
@@ -87,6 +92,13 @@ public class BlackJack {
         }
 
         boolean playerNotDone = playerTurn(false);
+        if (!(playerNotDone)) {
+            res = -1;
+            if (verbose) {
+                result(res);
+            }
+            return res;
+        }
         boolean dealerNotDone = dealerTurn();
 
         if (verbose) {
@@ -131,7 +143,6 @@ public class BlackJack {
         boolean playerNotDone = playerTurn(interactive);
         if (!(playerNotDone)) {
             res = -1;
-            result(res);
             return res;
         }
         boolean dealerNotDone = dealerTurn();
@@ -157,7 +168,7 @@ public class BlackJack {
         return res;
     }
 
-    public static void result(int res) {
+    private static void result(int res) {
         if (res == 0) {
             System.out.println("This game was a tie!\n\n");
         } else if (res == -1) {

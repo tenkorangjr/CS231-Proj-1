@@ -1,11 +1,21 @@
-Player won: 391 games (39% of the total games)
-Dealer won: 444 games (44% of the total games)
-Dealer and Player tied in 165 games (16% of the total games)
+Player: [] Total: 0
+Dealer: [] Total: 0
+Player: [10, 10] Total: 20
+Dealer: [10, 5, 6] Total: 21
+Dealer won this game! 
 
-Player won: 431 games (43% of the total games)
-Dealer won: 429 games (42% of the total games)
-Dealer and Player tied in 140 games (14% of the total games)
 
-Player won: 447 games (44% of the total games)
-Dealer won: 396 games (39% of the total games)
-Dealer and Player tied in 157 games (15% of the total games)
+Player: [] Total: 0
+Dealer: [] Total: 0
+Player: [10, 4, 5] Total: 19
+Dealer: [10, 10] Total: 20
+Dealer won this game! 
+
+
+Player: [] Total: 0
+Dealer: [] Total: 0
+Player: [10, 10] Total: 20
+Dealer: [4, 8, 8] Total: 20
+This game was a tie!
+
+
