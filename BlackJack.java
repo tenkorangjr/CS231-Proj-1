@@ -170,6 +170,10 @@ public class BlackJack {
     }
 
     private static void getResult(int res) {
+        /*
+         * Displays the result on the terminal
+         */
+
         if (res == 0) {
             System.out.println("This game was a tie!\n\n");
         } else if (res == -1) {
