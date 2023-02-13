@@ -12,16 +12,16 @@ import java.util.Scanner;
 public class BlackJack {
 
     // For the deck of cards
-    Deck deck;
+    public Deck deck;
     // For the hands to play the game
-    Hand playerHand;
-    Hand dealerHand;
+    private Hand playerHand;
+    private Hand dealerHand;
 
     // For reshuffling
-    int minShuffle;
+    private int minShuffle;
 
     // For input
-    Scanner uScanner;
+    private Scanner uScanner;
 
     public BlackJack(int reshuffleCutOff) {
         /*
@@ -93,7 +93,9 @@ public class BlackJack {
 
         boolean playerNotDone = playerTurn(false);
         if (!(playerNotDone)) {
-            System.out.println(toString());
+            if (verbose) {
+                System.out.println(toString());
+            }
             res = -1;
             if (verbose) {
                 getResult(res);
@@ -123,7 +125,7 @@ public class BlackJack {
             } else if (res == -1) {
                 System.out.println("Dealer won this game! \n\n");
             } else if (res == 1) {
-                System.out.println("Player won this game \n\n");
+                System.out.println("Player won this game! \n\n");
             }
         }
         return res;

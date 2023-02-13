@@ -10,6 +10,8 @@
 public class Simulation {
 
     public static void main(String[] args) {
+        // For the simulated version of the game
+
         BlackJack blackJack = new BlackJack();
 
         int playerWins = 0;

@@ -61,17 +61,22 @@ public class Deck {
     }
 
     /**
-     * Shuffles the cards currently in the deck.
+     * Shuffles the cards currently in the deck in-place.
      */
     public void shuffle() {
-        ArrayList<Card> res = new ArrayList<>();
         int loop = deck.size();
-        for (int i = 0; i < loop; i++) {
-            int rand_index = random.nextInt(deck.size());
-            res.add(deck.get(rand_index));
-            deck.remove(rand_index);
+
+        for (int i = loop - 1; i > 0; i--) {
+
+            int randNum = random.nextInt(i + 1);
+
+            Card temp = deck.get(i);
+            deck.add(i, deck.get(randNum));
+            deck.remove(deck.get(i + 1));
+            deck.add(randNum, temp);
+            deck.remove(randNum + 1);
         }
-        deck = res;
+
     }
 
     /**

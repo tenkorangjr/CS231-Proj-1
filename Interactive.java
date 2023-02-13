@@ -9,6 +9,8 @@
 
 public class Interactive {
     public static void main(String[] args) {
+        // For the interactivity of the game
+
         BlackJack blackJack = new BlackJack();
 
         blackJack.game(true, true);

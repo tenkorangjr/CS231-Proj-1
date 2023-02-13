@@ -1,10 +1,11 @@
 /*
-file name:      HandTests.java
-Authors:        Max Bender & Naser Al Madi
-last modified:  8/28/2022
-
-How to run:     java -ea HandTests
-*/
+ * Author: Michael Tenkorang
+ * Black Jack Game
+ * Date: 02/11/2023
+ * CS 231
+ * Section B
+ * HandTests.java
+ */
 
 public class HandTests {
 
@@ -40,13 +41,13 @@ public class HandTests {
         {
             // set up
             Hand h1 = new Hand();
-            h1.add(new Card(1));
+            h1.add(new Card(5));
 
             // verify
-            System.out.println(h1.getTotalValue() + " == 1");
+            System.out.println(h1.getTotalValue() + " == 5");
 
             // test
-            assert h1.getTotalValue() == 1 : "Error in Hand::getTotalValue() or Hand::add()";
+            assert h1.getTotalValue() == 5 : "Error in Hand::getTotalValue() or Hand::add()";
             assert h1.size() == 1 : "Error in Hand::size()";
         }
 
@@ -54,18 +55,18 @@ public class HandTests {
         {
             // set up
             Hand h1 = new Hand();
-            h1.add(new Card(1));
+            h1.add(new Card(5));
             h1.add(new Card(2));
             h1.add(new Card(3));
 
             // verify
-            System.out.println(h1.getTotalValue() + " == 6");
-            System.out.println(h1 + " == [1, 2, 3] : 6");
+            System.out.println(h1.getTotalValue() + " == 10");
+            System.out.println(h1 + " == [5, 2, 3] : 10");
 
             // test
-            assert h1.getTotalValue() == 6 : "Error in Hand::getTotalValue() or Hand::add()";
+            assert h1.getTotalValue() == 10 : "Error in Hand::getTotalValue() or Hand::add()";
             assert h1.size() == 3 : "Error in Hand::size()";
-            assert h1.getCard(0).getValue() == 1 : "Error in Hand::getCard()";
+            assert h1.getCard(0).getValue() == 5 : "Error in Hand::getCard()";
             assert h1.getCard(1).getValue() == 2 : "Error in Hand::getCard()";
             assert h1.getCard(2).getValue() == 3 : "Error in Hand::getCard()";
         }
@@ -74,16 +75,16 @@ public class HandTests {
         {
             // set up
             Hand h1 = new Hand();
-            h1.add(new Card(1));
+            h1.add(new Card(5));
             h1.add(new Card(2));
             h1.add(new Card(3));
+            h1.reset();
 
             // verify
-            System.out.println(h1.getTotalValue() + " == 6");
-            System.out.println(h1 + " == [1, 2, 3] : 6");
+            System.out.println(h1.getTotalValue() + " == 0");
+            System.out.println(h1 + " == [] : 0");
 
             // test
-            h1.reset();
 
             assert h1.getTotalValue() == 0 : "Error in Hand::getTotalValue() or Hand::add()";
             assert h1.size() == 0 : "Error in Hand::size()";
@@ -93,16 +94,16 @@ public class HandTests {
         {
             // set up
             Hand h1 = new Hand();
-            h1.add(new Card(1));
+            h1.add(new Card(5));
             h1.add(new Card(2));
             h1.add(new Card(3));
 
             // verify
-            System.out.println(h1.getTotalValue() + " == 6");
-            System.out.println(h1 + " == [1, 2, 3] : 6");
+            System.out.println(h1.getTotalValue() + " == 10");
+            System.out.println(h1 + " == [5, 2, 3] : 10");
 
             // test
-            assert h1.toString().equals("[1, 2, 3] : 6") : "Error in Hand::toString()";
+            assert h1.toString().equals("[5, 2, 3] : 10") : "Error in Hand::toString()";
         }
 
         System.out.println("*** Done testing Hand! ***\n");

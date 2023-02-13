@@ -1,10 +1,11 @@
 /*
-file name:      CardTests.java
-Authors:        Max Bender & Naser Al Madi
-last modified:  8/28/2022
-
-How to run:     java -ea CardTests
-*/
+ * Author: Michael Tenkorang
+ * Black Jack Game
+ * Date: 02/11/2023
+ * CS 231
+ * Section B
+ * CardTests.java
+ */
 
 public class CardTests {
 
